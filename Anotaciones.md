@@ -6,7 +6,7 @@ Verán una sección que dice _Our Core Lessons in Spanish_
 Hay un taller en español para la parte de bash y la de git, es decir, los dos últimos días.  
 
 ## Visualización
-[Guía de ejemplos para visualización]https://www.labri.fr/perso/nrougier/teaching/matplotlib/#other-types-of-plots  
+[Guía de ejemplos para visualización](https://www.labri.fr/perso/nrougier/teaching/matplotlib/#other-types-of-plots)  
 
 ## Intro to python
 Punto cero:    
