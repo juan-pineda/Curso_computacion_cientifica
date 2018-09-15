@@ -1,3 +1,5 @@
+<img src='semana_ciencia.png'>
+
 # Curso Computación Científica
 Material de soporte al curso de 1 semana, de introducción a la computación científica
 
