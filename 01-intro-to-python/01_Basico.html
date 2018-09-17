@@ -11826,12 +11826,53 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Instalaci&#243;n-de-Python-con-Anaconda">Instalaci&#243;n de Python con Anaconda<a class="anchor-link" href="#Instalaci&#243;n-de-Python-con-Anaconda">&#182;</a></h1><p><img src="images/anaconda_logo.png" width="20%"></p>
+<h2 id="En-Windows">En Windows<a class="anchor-link" href="#En-Windows">&#182;</a></h2><h3 id="Tutorial:">Tutorial:<a class="anchor-link" href="#Tutorial:">&#182;</a></h3><p><a href="https://medium.com/@GalarnykMichael/install-python-on-windows-anaconda-c63c7c3d1444">https://medium.com/@GalarnykMichael/install-python-on-windows-anaconda-c63c7c3d1444</a></p>
+<h3 id="Descargar-Anaconda:">Descargar Anaconda:<a class="anchor-link" href="#Descargar-Anaconda:">&#182;</a></h3><p><a href="https://www.anaconda.com/download/#windows">https://www.anaconda.com/download/#windows</a></p>
+<p>Instalar Anaconda usando el archivo ejecutable.
+En caso de duda durante la instalación, simplemente mantener las configuraciones por defecto.
+<strong>Importante:</strong> Activar la casilla <em>“Add Anaconda to my PATH environment variable”</em></p>
+<p>Para testar:</p>
 <ol>
-<li>Descargar la distribución de python3.6 de <a href="https://www.anaconda.com/download/#linux">anaconda</a> para Linux en el directorio <code>tutorial</code></li>
-<li>Abrir un terminal en Linux.</li>
-<li>Ir al directorio tutorial usando <code>cd tutorial</code></li>
-<li>Instalar la distribución con <code>bash Anaconda3-5.2.0-Linux-x86_64.sh</code></li>
-<li>Desde la terminal abrir el interprete de python usando <code>ipython</code></li>
+<li>Abrir un terminal “Anaconda prompt”.</li>
+<li><p>Digitar los siguientes comandos y ver si los reconoce</p>
+
+<pre><code>conda list
+python --version
+jupyter notebook  # Debe abrir un jupyter notebook en el navegador de internet
+where python
+where conda</code></pre>
+</li>
+</ol>
+<h2 id="En-Linux:">En Linux:<a class="anchor-link" href="#En-Linux:">&#182;</a></h2><h3 id="Tutorial">Tutorial<a class="anchor-link" href="#Tutorial">&#182;</a></h3><p><a href="https://www.pugetsystems.com/labs/hpc/How-to-Install-Anaconda-Python-and-First-Steps-for-Linux-and-Windows-917/">https://www.pugetsystems.com/labs/hpc/How-to-Install-Anaconda-Python-and-First-Steps-for-Linux-and-Windows-917/</a></p>
+<ol>
+<li>Descargar la distribución de python3.6 de <a href="https://www.anaconda.com/download/#linux">anaconda</a> para Linux (en nuestro caso ya fue descargada).</li>
+<li>Abrir un terminal en Linux<ul>
+<li><code>CTRL</code>+<code>ALT</code>+<code>T</code></li>
+</ul>
+</li>
+<li>Ir al directorio donde está el archivo descargado usando<ul>
+<li><code>cd Escritorio/Taller_01/</code></li>
+</ul>
+</li>
+<li>Para instalar la distribución digite:<ul>
+<li><code>bash Anaconda3-5.2.0-Linux-x86_64.sh</code></li>
+</ul>
+</li>
+<li>En caso de duda, seguir las configuraciones por defecto.</li>
+<li>Si le preguntan, autorizar a conda a actualizar la variable <code>PATH</code> para que conda y python sean visibles para todo el sistema. En otro caso, posiblemente tendremos que hacerlo a mano agregando al archivo <code>~/.bashrc</code> la línea:<ul>
+<li><code>export PATH="/home/centic/anaconda3/bin:$PATH"</code></li>
+</ul>
+</li>
+<li><p>Abrir un terminal y digitar los siguientes comandos a ver si los reconoce:</p>
+
+<pre><code>conda list
+python --version
+jupyter notebook  # Debe abrir un jupyter notebook en el navegador de internet
+which python
+which conda</code></pre>
+</li>
+<li><p>Desde el terminal abrir el interprete de python usando <code>ipython</code></p>
+</li>
 </ol>
 <p><img src="images/python_ready.png"></p>
 <hr>
@@ -12083,7 +12124,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Variables">Variables<a class="anchor-link" href="#Variables">&#182;</a></h2><p>Python reconoce automáticamente que tipo de variable se está creando.</p>
+<h2 id="Variables">Variables<a class="anchor-link" href="#Variables">&#182;</a></h2><p>Python reconoce automáticamente qué tipo de variable se está creando.</p>
 <ul>
 <li>La asignación se realiza con el operador <code>=</code></li>
 <li>Los nombres de variables pueden contener letras, números y guión bajo.</li>
@@ -12279,6 +12320,8 @@ div#notebook {
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Una curiosidad</span>
 <span class="p">(</span><span class="kc">True</span> <span class="o">+</span> <span class="kc">True</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span>
+
+<span class="c1"># Además note el uso del símbolo # para agregar comentarios al código</span>
 </pre></div>
 
 </div>
@@ -12290,7 +12333,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Estructuras-de-datos">Estructuras de datos<a class="anchor-link" href="#Estructuras-de-datos">&#182;</a></h1><p>Colección de elementos usados para almacenar datos relacionados.</p>
+<h1 id="Estructuras-de-datos">Estructuras de datos<a class="anchor-link" href="#Estructuras-de-datos">&#182;</a></h1><p>Colección de elementos usados para almacenar datos relacionados.<br>
+Principales tipos de estructuras: listas, tuplas, diccionarios, arrays</p>
 
 </div>
 </div>
@@ -12329,9 +12373,10 @@ div#notebook {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;6&#39;</span><span class="p">)</span> <span class="c1"># Añadir un elemento</span>
 <span class="n">lista</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mf">3.0</span><span class="p">)</span> <span class="c1"># Eliminar un elemento</span>
 
-<span class="nb">print</span><span class="p">(</span> <span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>    <span class="c1"># Acceder al primer elemento, empieza en CERO</span>
-<span class="nb">print</span><span class="p">(</span> <span class="n">lista</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>    <span class="c1"># Acceder al cuarto elemento</span>
-<span class="nb">print</span><span class="p">(</span> <span class="n">lista</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>   <span class="c1"># Acceder al último elemento</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>    <span class="c1"># Acceder al primer elemento, empieza en CERO</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>    <span class="c1"># Acceder al cuarto elemento</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>   <span class="c1"># Acceder al último elemento</span>
 </pre></div>
 
 </div>
@@ -12418,7 +12463,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Podemos-indexar-las-secuancias,-utilizando-la-sintaxis">Podemos indexar las secuancias, utilizando la sintaxis<a class="anchor-link" href="#Podemos-indexar-las-secuancias,-utilizando-la-sintaxis">&#182;</a></h4><p><code>[&lt;inicio&gt;:&lt;final&gt;:&lt;salto&gt;]</code></p>
+<h4 id="Podemos-indexar-las-secuencias,-utilizando-la-sintaxis">Podemos indexar las secuencias, utilizando la sintaxis<a class="anchor-link" href="#Podemos-indexar-las-secuencias,-utilizando-la-sintaxis">&#182;</a></h4><p><code>[&lt;inicio&gt;:&lt;final&gt;:&lt;salto&gt;]</code></p>
 
 </div>
 </div>
@@ -12490,12 +12535,44 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Los elementos pueden ser modificados,</span>
+<span class="c1"># y se pueden eliminar o agregar elementos</span>
+<span class="n">diccionario</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Andrés&#39;</span>
+<span class="n">diccionario</span><span class="p">[</span><span class="s1">&#39;números favoritos&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">11</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">diccionario</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">del</span><span class="p">(</span><span class="n">diccionario</span><span class="p">[</span><span class="s1">&#39;celular&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">diccionario</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Indentaci&#243;n-en-Python">Indentaci&#243;n en Python<a class="anchor-link" href="#Indentaci&#243;n-en-Python">&#182;</a></h1><p>Los bloques de código en Python se esctructuran por la indentación.</p>
-<p>En otros lenguajes se usa el punto y coma <code>;</code> y los corchetes <code>{}</code> para saber donde termina un bloque de código, y la indentación es un estilo para leer mejor.</p>
+<p>En otros lenguajes se usa el punto y coma <code>;</code> y los corchetes <code>{}</code> para saber dónde termina un bloque de código, y la indentación es un estilo para leer mejor.</p>
 <p>En <strong>Python</strong> la indentación es un requisito y facilita la lectura del código, esta identación se puede hacer con <code>espacios</code> o <code>tabs</code>.</p>
 <p><img src="images/blocks.png"></p>
 
@@ -12529,11 +12606,28 @@ div#notebook {
 
 <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Es un número negativo&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ahora ya estamos afuera del loop if&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Por favor, introduzca un número: &quot;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Es un número negativo&#39;</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Cero&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Es positivo&#39;</span><span class="p">)</span>
-    
 </pre></div>
 
 </div>
@@ -12545,51 +12639,15 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Estructura-for">Estructura <code>for</code><a class="anchor-link" href="#Estructura-for">&#182;</a></h2><p>Podemos recorrer una lista, tupla, set o diccionario.</p>
-
+<h2 id="Estructura-for-y-funci&#243;n-range()">Estructura <code>for</code> y funci&#243;n <code>range()</code><a class="anchor-link" href="#Estructura-for-y-funci&#243;n-range()">&#182;</a></h2>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;gato&#39;</span><span class="p">,</span> <span class="s1">&#39;ventana&#39;</span><span class="p">,</span> <span class="s1">&#39;melifluo&#39;</span><span class="p">]</span>
-
-<span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">7</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Rompemos en siete.&#39;</span><span class="p">)</span>
-        <span class="k">break</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Funci&#243;n-range()">Funci&#243;n <code>range()</code><a class="anchor-link" href="#Funci&#243;n-range()">&#182;</a></h2><h3 id="range(-stop)">range( stop)<a class="anchor-link" href="#range(-stop)">&#182;</a></h3>
+<h3 id="range(-stop)">range( stop)<a class="anchor-link" href="#range(-stop)">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -12635,8 +12693,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Estructura-while">Estructura <code>while</code><a class="anchor-link" href="#Estructura-while">&#182;</a></h2><p>Repetir un segmento de código hasta que no se cumpla la condición.</p>
-<p><em>Evitar los búcles infinitos</em></p>
+<p>También podemos recorrer directamente los elementos de una lista, tupla, set o diccionario.</p>
 
 </div>
 </div>
@@ -12646,11 +12703,82 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;gato&#39;</span><span class="p">,</span> <span class="s1">&#39;ventana&#39;</span><span class="p">,</span> <span class="s1">&#39;melifluo&#39;</span><span class="p">]</span>
 
-<span class="k">while</span><span class="p">(</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">1000</span> <span class="p">):</span>
+<span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">7</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Salimos del loop al llegar al siete.&#39;</span><span class="p">)</span>
+        <span class="k">break</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;nombre&#39;</span>  <span class="p">:</span> <span class="s1">&#39;Diego&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;celular&#39;</span> <span class="p">:</span> <span class="s1">&#39;Nokia 1100&#39;</span>
+    <span class="p">}</span>
+
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">diccionario</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Estructura-while">Estructura <code>while</code><a class="anchor-link" href="#Estructura-while">&#182;</a></h2><p>Repetir un segmento de código mientras se cumpla una condición.</p>
+<p><em>Atención para evitar los búcles infinitos</em></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Vamos a generar las potencias de 2 menores que 10000,</span>
+<span class="c1"># sin saber previamente cuántos números son</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">potencias</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">while</span><span class="p">(</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">10000</span> <span class="p">):</span>
+    <span class="n">potencias</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
     <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">potencias</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12663,7 +12791,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Ejercicio-de-Programaci&#243;n:">Ejercicio de Programaci&#243;n:<a class="anchor-link" href="#Ejercicio-de-Programaci&#243;n:">&#182;</a></h2><p>Escriba un programa que imprima los números del 1 al 100, pero que para los múltiplos de 3 imprima <code>Fizz</code> en lugar del número y para los múltiplos de 5 imprima <code>Buzz</code>.</p>
-<p>Para números que son múltiplos de 3 y 5 imprima <code>FizzBuzz</code>.</p>
+<p>Para números que son múltiplos de 3 y 5 imprima <code>FizzBuzz</code>, y almacene en un diccionario con las claves <code>'Fizz'</code>, <code>'Buzz'</code>, y <code>'FizzBuzz'</code> los números correspondientes a cada caso.</p>
 
 </div>
 </div>
@@ -12688,6 +12816,128 @@ div#notebook {
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Comandos-de-ayuda-y-atributos-propios-de-los-diferentes-tipos-de-estructuras">Comandos de ayuda y atributos propios de los diferentes tipos de estructuras<a class="anchor-link" href="#Comandos-de-ayuda-y-atributos-propios-de-los-diferentes-tipos-de-estructuras">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Ya vimos que las listas tienen los métodos .append y .remove</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;5&#39;</span><span class="p">)</span> <span class="c1"># Añadir un elemento</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mf">3.0</span><span class="p">)</span> <span class="c1"># Eliminar un elemento</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#191;Qu&#233;-otros-m&#233;todos-existen-para-este-tipo-de-estructuras?">&#191;Qu&#233; otros m&#233;todos existen para este tipo de estructuras?<a class="anchor-link" href="#&#191;Qu&#233;-otros-m&#233;todos-existen-para-este-tipo-de-estructuras?">&#182;</a></h3><p>Para saberlo digite el nombre de la variable, un punto, y el tabulador.</p>
+<p><code>lista.</code> + <code>tab</code></p>
+<p>Al digitar <code>tab</code> Python examina y nos muestras las distintas posibilidades que tienen sentido para completar una línea de código, en caso de hallar algunas.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Para saber en qué consiste, por ejemplo, el método copy(), digite:</span>
+lista.copy<span class="o">?</span>
+<span class="n">new_list</span> <span class="o">=</span> <span class="n">lista</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Aliasing">Aliasing<a class="anchor-link" href="#Aliasing">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Es posible &quot;copiar&quot; un elemento de forma más directa,</span>
+<span class="c1"># sin embargo esto puede generar inconvenientes en algunos casos:</span>
+<span class="n">new_list</span> <span class="o">=</span> <span class="n">lista</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">new_list</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">8</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">new_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">new_list</span> <span class="o">=</span> <span class="n">lista</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">new_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">8</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">new_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>El problema observado en el primer caso se conoce como <strong><em>aliasing</em></strong>, y ocurre por que Python no creó una nueva variable, sino una vista de la variable original. Para evitar comportamientos indeseados, en general es más seguro utilizar el método <code>.copy()</code></p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -12736,8 +12986,19 @@ div#notebook {
     <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Hola </span><span class="si">{nombre}</span><span class="s1">, </span><span class="si">{msj}</span><span class="s1">&#39;</span><span class="p">)</span>
     
 <span class="n">my_function</span><span class="p">(</span><span class="s1">&#39;Diego&#39;</span><span class="p">)</span>
+</pre></div>
 
-<span class="n">my_function</span><span class="p">(</span><span class="s1">&#39;Diego&#39;</span><span class="p">,</span> <span class="s1">&#39;quedaste PFU.&#39;</span><span class="p">)</span>
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_function</span><span class="p">(</span><span class="s1">&#39;Diego&#39;</span><span class="p">,</span> <span class="s1">&#39;quedaste PFU.&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12769,16 +13030,33 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">multiplicacion</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span>
+    <span class="k">return</span> <span class="n">z</span>
+
+<span class="n">multiplicacion</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Ejemplo-mas-completo">Ejemplo mas completo<a class="anchor-link" href="#Ejemplo-mas-completo">&#182;</a></h2><ol>
-<li><p>Cree dos archivos llamados <code>calculadora.py</code> y <code>principal.py</code> que estén en la misma carpeta.</p>
+<h2 id="Ejemplo-m&#225;s-completo">Ejemplo m&#225;s completo<a class="anchor-link" href="#Ejemplo-m&#225;s-completo">&#182;</a></h2><ol>
+<li><p>Cree un archivo llamado <code>calculadora.py</code> en la misma carpeta en que está trabajando. Para verificar su ubicación, en <code>ipython</code> digite <code>pwd</code>, y para crear el archivo, utilice por ejemplo el editor de texto <code>gedit</code></p>
 </li>
 <li><p>En el archivo <code>calculadora.py</code> crear 4 funciones para sumar, restar, multiplicar y dividir dos números enteros, controle la división por 0 usando un if.</p>
 </li>
-<li><p>En el archivo <code>principal.py</code> escribir el siguiente código:</p>
+<li><p>Ahora en <code>ipython</code> digitamos:</p>
 </li>
 </ol>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">calculadora</span> <span class="kn">import</span> <span class="n">suma</span><span class="p">,</span> <span class="n">resta</span><span class="p">,</span> <span class="n">multiplicacion</span><span class="p">,</span> <span class="n">division</span>
@@ -12792,13 +13070,55 @@ div#notebook {
 <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;{a} / {b} = {division(a,b)}&#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;{a} / {0} = {division(a,0)}&#39;</span><span class="p">)</span>
 </pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Escribir-y-correr-programas-de-python">Escribir y correr programas de python<a class="anchor-link" href="#Escribir-y-correr-programas-de-python">&#182;</a></h2><p>Aprovechando el ejemplo anterior, vamos a apreder como crear un programa con toda una serie de instrucciones para ejecutarlo de forma no interactiva.</p>
+<ol>
+<li><p>Cree un segundo archivo llamado <code>principal.py</code> en el mismo directorio de trabajo</p>
+</li>
+<li><p>Digite los mismos comandos del ejemplo anterior en el archivo <code>principal.py</code></p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">calculadora</span> <span class="kn">import</span> <span class="n">suma</span><span class="p">,</span> <span class="n">resta</span><span class="p">,</span> <span class="n">multiplicacion</span><span class="p">,</span> <span class="n">division</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mf">3.14</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;{a} + {b} = {suma(a,b)}&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;{a} - {b} = {resta(a,b)}&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;{a} * {b} = {multiplicacion(a,b)}&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;{a} / {b} = {division(a,b)}&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;{a} / {0} = {division(a,0)}&#39;</span><span class="p">)</span>
+</pre></div>
+<ol>
+<li><p>Abra una nueva pestaña del terminal usando <code>ctrl</code>+<code>alt</code>+<code>t</code></p>
+</li>
+<li><p>Verifique que se encuentra en el directorio correcto usando el comando <code>pwd</code></p>
+</li>
+<li><p>Ruede su programa digitando <code>python principal.py</code></p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Resumen:">Resumen:<a class="anchor-link" href="#Resumen:">&#182;</a></h2><ul>
 <li>Conoce las operaciones matemáticas básicas y comparadores booleanos.</li>
 <li>Maneja de estructuras de datos <code>list</code>, <code>tuple</code>, <code>dict</code></li>
 <li>Entiende el bloque de código y la indentación.</li>
 <li>Sabe usar las estructuras condicionales <code>if</code>, <code>elif</code>, <code>else</code></li>
 <li>Puede usar los bucles para iterar en listas y rangos <code>for..in</code>, <code>while</code></li>
-<li>Puede crear funciones e importar estas como modulos <code>def</code>, <code>import</code></li>
+<li>Puede crear funciones e importar estas como módulos <code>def</code>, <code>import</code></li>
 </ul>
 
 </div>

@@ -15,7 +15,7 @@ Taller=${DIRECTORY}/Taller_01
 
 mkdir ${Taller}
 
-cp 01_Basico.html 02_Avanzado.html Anotaciones.html  ${Taller}
+cp 01_Basico.html 02_Avanzado.html ${Taller}
 cp -r images ${Taller}
 cp ~/Anaconda3-5.1.0-Linux-x86_64.sh ${Taller}
 
