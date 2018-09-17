@@ -12236,6 +12236,8 @@ which conda</code></pre>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">&lt;=</span> <span class="n">b</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">&gt;=</span> <span class="n">b</span><span class="p">)</span>
+<span class="c1"># Tip: Tras rodar el primer comando,vea lo que pasa si pulsa</span>
+<span class="c1"># la flecha hacia arriba</span>
 </pre></div>
 
 </div>
@@ -12334,7 +12336,7 @@ which conda</code></pre>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Estructuras-de-datos">Estructuras de datos<a class="anchor-link" href="#Estructuras-de-datos">&#182;</a></h1><p>Colección de elementos usados para almacenar datos relacionados.<br>
-Principales tipos de estructuras: listas, tuplas, diccionarios, arrays</p>
+Principales tipos de estructuras: listas, tuplas, diccionarios</p>
 
 </div>
 </div>
@@ -12602,12 +12604,10 @@ Principales tipos de estructuras: listas, tuplas, diccionarios, arrays</p>
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Por favor, introduzca un número: &quot;</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Por favor, introduzca un número: &quot;</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Es un número negativo&#39;</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ahora ya estamos afuera del loop if&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12791,7 +12791,7 @@ Principales tipos de estructuras: listas, tuplas, diccionarios, arrays</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Ejercicio-de-Programaci&#243;n:">Ejercicio de Programaci&#243;n:<a class="anchor-link" href="#Ejercicio-de-Programaci&#243;n:">&#182;</a></h2><p>Escriba un programa que imprima los números del 1 al 100, pero que para los múltiplos de 3 imprima <code>Fizz</code> en lugar del número y para los múltiplos de 5 imprima <code>Buzz</code>.</p>
-<p>Para números que son múltiplos de 3 y 5 imprima <code>FizzBuzz</code>, y almacene en un diccionario con las claves <code>'Fizz'</code>, <code>'Buzz'</code>, y <code>'FizzBuzz'</code> los números correspondientes a cada caso.</p>
+<p>Para números que son múltiplos de 3 y 5 imprima <code>FizzBuzz</code>.</p>
 
 </div>
 </div>
@@ -12816,6 +12816,16 @@ Principales tipos de estructuras: listas, tuplas, diccionarios, arrays</p>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Ejercicio-de-Programaci&#243;n:">Ejercicio de Programaci&#243;n:<a class="anchor-link" href="#Ejercicio-de-Programaci&#243;n:">&#182;</a></h2><p>Intente el mismo ejercicio, pero esta vez en lugar de imprimir los números en pantalla
+almacénelos en un diccionario con las claves <code>'Fizz'</code>, <code>'Buzz'</code>, y <code>'FizzBuzz'</code>.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -12900,7 +12910,7 @@ lista.copy<span class="o">?</span>
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">8</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">8</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">new_list</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
@@ -13104,6 +13114,15 @@ lista.copy<span class="o">?</span>
 <li><p>Ruede su programa digitando <code>python principal.py</code></p>
 </li>
 </ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Fin-de-la-primera-parte">Fin de la primera parte<a class="anchor-link" href="#Fin-de-la-primera-parte">&#182;</a></h2><p>Para cerrar la sesión de <code>IPYTHON</code> digite <code>exit</code>. Para salir del terminal, digite <code>exit</code> nuevamente.</p>
 
 </div>
 </div>
