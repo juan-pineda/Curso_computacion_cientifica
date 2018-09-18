@@ -11,9 +11,9 @@ Este curso hace parte de la programación de la [Semana Internacional de las Cie
 Juan Carlos Basto Pineda  
 Andrés David Guerrero Durán  
 Andrés Felipe Jerez Ariza  
-Yeison Fabian Santos  
 Diego Alexander Rueda Plata  
 Jhon James Angarita Pallares  
+Yeison Fabian Santos
 
 ## Programación
 
